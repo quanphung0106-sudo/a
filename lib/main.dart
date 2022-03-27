@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:profile_1/page/edit_profile_page.dart';
+import 'package:profile_1/page/main_page.dart';
 import 'package:profile_1/page/profile_page.dart';
 import 'package:profile_1/utils/user_preferences.dart';
 
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         dividerColor: Colors.black,
       ),
       title: title,
-      home: ProfilePage(),
+      home: chatapp(),
     );
   }
 }
