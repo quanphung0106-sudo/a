@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 class ProfileWidget extends StatelessWidget {
   final String imagePath;
   final VoidCallback onClicked;
+  final bool isEdit;
 
   const ProfileWidget({
     Key? key,
     required this.imagePath,
+    this.isEdit = false,
     required this.onClicked,
   }) : super(key: key);
 
@@ -30,13 +32,15 @@ class ProfileWidget extends StatelessWidget {
   }
 
   Widget buildImage() {
-    final image = NetworkImage(imagePath);
+    final image = imagePath.contains('https://')
+        ? NetworkImage(imagePath)
+        : FileImage(File(imagePath));
 
     return ClipOval(
       child: Material(
         color: Colors.transparent,
         child: Ink.image(
-          image: image,
+          image: image as ImageProvider,
           fit: BoxFit.cover,
           width: 128,
           height: 128,
@@ -50,7 +54,8 @@ class ProfileWidget extends StatelessWidget {
       child: buildCircle(
           color: color,
           all: 8,
-          child: Icon(Icons.edit, color: Colors.white, size: 20)),
+          child: Icon(isEdit ? Icons.add_a_photo : Icons.edit,
+              color: Colors.white, size: 20)),
       all: 3,
       color: Colors.white);
 

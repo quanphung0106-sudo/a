@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:profile_1/model/user.dart';
+import 'package:profile_1/page/edit_profile_page.dart';
 import 'package:profile_1/utils/user_preferences.dart';
 import 'package:profile_1/widget/appbar_widget.dart';
 import 'package:profile_1/widget/button_widget.dart';
+import 'package:profile_1/widget/number_widget.dart';
 import 'package:profile_1/widget/profile_widget.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -15,7 +17,7 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
-    final user = UserPreferences.myUser;
+    final user = UserPreferences.getUser();
 
     return Scaffold(
       appBar: buildAppBar(context),
@@ -24,16 +26,38 @@ class _ProfilePageState extends State<ProfilePage> {
         children: [
           ProfileWidget(
             imagePath: user.imagePath,
-            onClicked: () async {},
+            onClicked: () async {
+              await Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => EditProfilePage()),
+              );
+              setState(() {});
+            },
           ),
           const SizedBox(height: 24),
           buildName(user),
           const SizedBox(height: 24),
-          Center(child: buildUpgradeButton()),
+          NumbersWidget(),
+          const SizedBox(height: 48),
+          buildAbout(user),
         ],
       ),
     );
   }
+
+  Widget buildAbout(User user) => Container(
+        padding: EdgeInsets.symmetric(horizontal: 48),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+          Text(
+            'About',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 16),
+          Text(
+            user.about,
+            style: TextStyle(fontSize: 16, height: 1.4),
+          ),
+        ]),
+      );
 
   Widget buildName(User user) => Column(
         children: [
@@ -48,7 +72,4 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
         ],
       );
-
-  Widget buildUpgradeButton() =>
-      ButtonWidget(text: 'Support me!', onClicked: () {});
 }
