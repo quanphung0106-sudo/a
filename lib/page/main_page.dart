@@ -36,7 +36,10 @@ class _chatappState extends State<chatapp> {
       url = "https://media.istockphoto.com/photos/university-application-form-picture-id168367619?k=20&m=168367619&s=612x612&w=0&h=TLPr2sgJ-3d1R6xH8QJ9DtGt1FoXE5xduX0xGf_9WPw=";
     }else if(value==2){
       url ="https://media.istockphoto.com/photos/group-of-diverse-multiethnic-people-with-various-jobs-picture-id513957135?k=20&m=513957135&s=612x612&w=0&h=Pb5ooTjGpFUwW6rz3bM_asypplABHCQJ_6QhqB5dakw=";
-
+    }else if(value==3){
+      url ="https://media.istockphoto.com/photos/delivering-an-informative-presentation-like-a-pro-picture-id1141464027?k=20&m=1141464027&s=612x612&w=0&h=gyoKUv7vRVS6MWUjBCLWOu9Gu2WpQmk9W868HyEHvVA=";
+    }else if(value==4){
+      url ="https://media.istockphoto.com/photos/group-of-volunteers-with-surgical-masks-cleaning-nature-together-picture-id1265552575?k=20&m=1265552575&s=612x612&w=0&h=qopAHOutHxR50odcGoWOQqfkAmYuyCZTYndDojcHWn8=";
     }
     return Card(
       child: Image.network(url,
@@ -54,6 +57,10 @@ class _chatappState extends State<chatapp> {
       Desp="Nhằm cung cấp đầy đủ thông tin về ngành nghề, tạo điều kiện cho thí sinh có nhiều cơ hội xét tuyển vào Đại học. Đại học Đông Á thông báo tuyển sinh 2022. Thời gian nhận hồ sơ bắt đầu từ 01/03/2022";
     }else if(value==2){
       Desp="Năm nay đã là năm thứ 6 trường Đại học Đông Á kết hợp cùng công ty SEKISHO VIỆT NAM tổ chức Ngày hội việc làm với tên gọi “SEKISHO JOB FAIR”";
+    }else if(value==3){
+      Desp="Theo định hướng ứng dụng và nghề nghiệp, hội nhập quốc tế. Chương trình đào tạo lấy SV làm trung tâm";
+    }else if(value==4){
+      Desp="Nhiều hoạt động bổ ích và hấp dẫn, là sân chơi để sinh viên có thể tỏa sáng với niềm đam mê của mình";
     }
     return  SizedBox(
       width: double.infinity,
@@ -86,6 +93,38 @@ class _chatappState extends State<chatapp> {
       appBar: AppBar(
         title: const Text("DONG A UNIVERSITY"),
         centerTitle: true,
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: const Text("Account 1"),
+              accountEmail: const Text("SinhVien2gmail.com"),
+              currentAccountPicture: const CircleAvatar(
+
+              ),
+            ),
+            ListTile(
+              title: new Text("Profile"),
+              leading: new Icon(Icons.account_box),
+            ),
+            Divider(color: Colors.black,),
+            const ListTile(
+              title: Text("Setting"),
+              leading: Icon(Icons.settings),
+            ),
+            const Divider(color: Colors.black,),
+            const ListTile(
+              title:  Text("LogOut"),
+              leading: Icon(Icons.logout_outlined),
+            ),
+            const Divider(color: Colors.black,),
+            const ListTile(
+              title: Text("Help"),
+              leading: Icon(Icons.help_center_sharp),
+            ),
+          ],
+        ),
       ),
       body: ListView(
         padding: const EdgeInsets.only(top: 40.0),
@@ -120,7 +159,11 @@ class _chatappState extends State<chatapp> {
           _BScard(2),
           _BSDetaisl("NGÀY HỘI VIỆC LÀM", "Ngày hội việc làm tại các doang nghiệp Nhật Bản",2),
           //Card 3
-
+          _BScard(3),
+          _BSDetaisl("CHƯƠNG TRÌNH ĐÀO TẠO", "Chương trình đào tạo tiên tiến",3),
+          //Card 4
+          _BScard(4),
+          _BSDetaisl("MÔI TRƯỜNG HỌC TẬP NĂNG ĐỘNG", "Đem đến cho sinh viên nhiều trải nghiệm độc đáo",4),
         ],
       ),
     );

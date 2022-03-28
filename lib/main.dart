@@ -3,6 +3,7 @@ import 'package:profile_1/page/edit_profile_page.dart';
 import 'package:profile_1/page/main_page.dart';
 import 'package:profile_1/page/profile_page.dart';
 import 'package:profile_1/utils/user_preferences.dart';
+import 'package:profile_1/page/main_page.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
