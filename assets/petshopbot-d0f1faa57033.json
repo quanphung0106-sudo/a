@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "petshopbot-qovt",
+  "private_key_id": "7999b0216ea0bb022017d09a80b939a3e279e26d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDCLT62ltKjwQZM\nzj/I6xW2M+iQJO+Dbdkg4OvzPFg6GqccLYqdJHmtAp+0XVwyC06135Fl37yOS/Ax\nvoIium1r5l5HZlV05hHaVSJENy+GOpNS7LsZTwNw5VsMSSxXoZIWjgvs5GOn7Sta\ntfI+fn8cjwIMA9ikSr6skvwUNEkI3kRmsmXKGA9Gnu3Va0E/rxQw98XdNAIap3uS\nLHrdNUtx/XI5lFJm6RgHrNXV3V/IXqu4Dwf74BagLdHoQcNXNiZNpwd9S8b+x0p1\ni3GWsW6kywJEak0k08cmHUrgFvf9rrsjpAQqCe2c3El9oFn+QvGBHm6kJ/omLNMM\nQwo3/QpdAgMBAAECggEAIiq7bv31dP59OQ0OoLAq6xtRp/Fz2qS80MH7Cpr67Eht\n0LG7wwBcz6JXTzGhTCX8tNhwuWQHxeMbUelzdSBoKhUIUFhzn4TvLcOOqsGqIVyT\nuULx/hdO4/HbljsW7BmAPutCMm4SkgUTvJuo0zHHdJM+WTZhC7GiQPQBGp4DnuVM\ntU1a8ev+vkwnSYnsrtxgTOZ4u7Bg1pR6nvQxQwiq5OHYK0VrP/buZ/0rsxEele51\nxoUaz4iunsRwNgflDlAPOXBSoAZbkkLi32aBv6JCHqR9WhbKHvHX7uVMTtsxnVEI\nR2WGtw+s51spUNRz25KKBxQESkxs8LzfiNadTFH6GQKBgQDtl1HyPZJV0hGpQZCs\nUt5uL99pA/ozsKO4gyENrfNHU3lsd4H3WeZjvL2z4SUTCoewauKXFIhiezNTX2ZM\nfd6Tv1uY1twXlfVFa75qQ7boonJiBpGci+oHPpzNJBPnawRu7gFh1RzViPsgpTUa\nCsDeEi3nPtARjEtuUjOEl0wEtQKBgQDROMpBLtpBu2SaF3QrjzyoLHeUS0HMLEJw\nINBhxkh+kiuUBu7O4TTvBgIdWYyDZVLP1crfQTTnBX4dtjmu0hSLqyAUoPE3tOkP\nU7S6VTcOXHaEjpVK9Pbk/StLtbUOWkwXdwMHGtOknIQ5BgWjXxhZIy65U6rw2aRL\nTyN7X3lgCQKBgQDix8wdN64lIpVfBEkuYw8TB7jsyTIaAqHTbb6wCviqfT/qS4wP\naI0jaDV+rAmyShvIRc2wvZWMwuHz05yWqJI6Xq30jimYjbeGotgnIClHlj8t1+1H\nCrnAXoBWwvgIrTqXE7DYDA4wuEZUG7069Uaw8ZNFJcx+43XggK/SAIQ7/QKBgQCs\n6HQunpv+CvK/bnaxsTT9/5Hr2q5MIJ/frx7IT2iGQiMFuR0PmIt4psyEmQdJaCmi\nXhvFmkwwSRfLUlglpLUaIJjos4Hm+fpKknEgNWDE26GPN48mXYDWCm0HquoxLGsK\nUW8NJhyXREr6HYH3XJXwxOTOgNkbJ6NiIcs/IM5ckQKBgAEUsW+YTIW8F/jwSJnG\n3T9+AsPrwMagkAetEiV6XwV225mgB6VXgq2Pl7QKljqOKtGU8l+fAg0m8wXoXjvx\nDlDqpiHacgHSYPju1dCRrLnSHCVDp8yOk1BMeksjGG5/mNilF/QaoWXpCeP5lE91\nSvVF4cubrBqAZUQnlNUL+vej\n-----END PRIVATE KEY-----\n",
+  "client_email": "flutter-dialogflow@petshopbot-qovt.iam.gserviceaccount.com",
+  "client_id": "108535489415687349203",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/flutter-dialogflow%40petshopbot-qovt.iam.gserviceaccount.com"
+}
