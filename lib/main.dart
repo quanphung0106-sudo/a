@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:profile_1/Page_ChatBot/chatbot.dart';
 import 'package:profile_1/page/edit_profile_page.dart';
 import 'package:profile_1/page/profile_page.dart';
 import 'package:profile_1/utils/user_preferences.dart';
 
 Future main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  // WidgetsFlutterBinding.ensureInitialized();
+  //
+  // await UserPreferences.init();
 
-  await UserPreferences.init();
-  
   runApp(const MyApp());
 }
 
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
         dividerColor: Colors.black,
       ),
       title: title,
-      home: ProfilePage(),
+      // home: ProfilePage(),
+      home: ChatBot(),
     );
   }
 }

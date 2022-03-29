@@ -1,4 +1,6 @@
+import 'package:bubble/bubble.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dialogflow/dialogflow_v2.dart';
 
 class ChatBot extends StatefulWidget {
   const ChatBot({Key? key}) : super(key: key);
@@ -10,7 +12,7 @@ class ChatBot extends StatefulWidget {
 class _ChatBotState extends State<ChatBot> {
   void response(query) async {
     AuthGoogle authGoogle =
-        await AuthGoogle(fileJson: "assets/petshopbot-d0f1faa57033.json")
+        await AuthGoogle(fileJson: "assets/chatbot-uda-rvfq-576d4bb23a83.json")
             .build();
     Dialogflow dialogflow =
         Dialogflow(authGoogle: authGoogle, language: Language.english);
