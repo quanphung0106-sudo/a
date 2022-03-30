@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:profile_1/widget/textfield_widget.dart';
 
 void main () {
 
@@ -43,7 +44,7 @@ class _chatappState extends State<chatapp> {
     }
     return Card(
       child: Image.network(url,
-        fit: BoxFit.fill,
+        fit: BoxFit.cover,
         width: 140.0,
         height: 150.0,
       ),
@@ -54,13 +55,13 @@ class _chatappState extends State<chatapp> {
   Widget _BSDetaisl(String Degree, String prof, int value){
     String  Desp="";
     if(value==1){
-      Desp="Nhằm cung cấp đầy đủ thông tin về ngành nghề, tạo điều kiện cho thí sinh có nhiều cơ hội xét tuyển vào Đại học. Đại học Đông Á thông báo tuyển sinh 2022. Thời gian nhận hồ sơ bắt đầu từ 01/03/2022";
+      Desp="Nhằm cung cấp đầy đủ thông tin về ngành nghề, tạo điều kiện cho thí sinh có nhiều cơ hội xét tuyển vào Đại học.";
     }else if(value==2){
       Desp="Năm nay đã là năm thứ 6 trường Đại học Đông Á kết hợp cùng công ty SEKISHO VIỆT NAM tổ chức Ngày hội việc làm với tên gọi “SEKISHO JOB FAIR”";
     }else if(value==3){
       Desp="Theo định hướng ứng dụng và nghề nghiệp, hội nhập quốc tế. Chương trình đào tạo lấy SV làm trung tâm";
     }else if(value==4){
-      Desp="Nhiều hoạt động bổ ích và hấp dẫn, là sân chơi để sinh viên có thể tỏa sáng với niềm đam mê của mình";
+      Desp="Nhiều hoạt động hấp dẫn, là sân chơi để sinh viên có thể tỏa sáng với niềm đam mê của mình";
     }
     return  SizedBox(
       width: double.infinity,
@@ -93,40 +94,59 @@ class _chatappState extends State<chatapp> {
       appBar: AppBar(
         title: const Text("DONG A UNIVERSITY"),
         centerTitle: true,
+        actions: [
+          Padding(padding: EdgeInsets.only(right: 20.0),
+         child: GestureDetector(
+           onTap: (){
+             print("Action button");
+           },
+           child: Icon(
+             Icons.search,
+             size: 25.0,
+           ),
+         ),
+          ),
+        ],
+        
       ),
+      
       drawer: Drawer(
         child: ListView(
           children: [
             UserAccountsDrawerHeader(
               accountName: const Text("Account 1"),
-              accountEmail: const Text("SinhVien2gmail.com"),
+              accountEmail: const Text("SinhVien1gmail.com"),
               currentAccountPicture: const CircleAvatar(
 
               ),
             ),
             ListTile(
-              title: new Text("Profile"),
+              title: new Text("Trang cá nhân"),
               leading: new Icon(Icons.account_box),
             ),
             Divider(color: Colors.black,),
             const ListTile(
-              title: Text("Setting"),
+              title: Text("Cài đặt"),
+              subtitle:Text('Quyền riêng tư, Bảo mật, Ngôn ngữ'),
               leading: Icon(Icons.settings),
             ),
             const Divider(color: Colors.black,),
             const ListTile(
-              title:  Text("LogOut"),
+              title:  Text("Đăng xuất"),
               leading: Icon(Icons.logout_outlined),
             ),
             const Divider(color: Colors.black,),
             const ListTile(
-              title: Text("Help"),
+              title: Text("Trợ giúp"),
               leading: Icon(Icons.help_center_sharp),
             ),
           ],
         ),
+        
       ),
-      body: ListView(
+      
+      body: 
+           ListView(
         padding: const EdgeInsets.only(top: 40.0),
         children: [
           Center(
@@ -168,4 +188,7 @@ class _chatappState extends State<chatapp> {
       ),
     );
   }
+}
+
+class SettingsScreen {
 }
