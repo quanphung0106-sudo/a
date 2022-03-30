@@ -48,13 +48,13 @@ class _ProfilePageState extends State<ProfilePage> {
         padding: EdgeInsets.symmetric(horizontal: 48),
         child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
           Text(
-            'About',
+            'Description',
             style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 16),
           Text(
             user.about,
-            style: TextStyle(fontSize: 16, height: 1.4),
+            style: TextStyle(fontSize: 18, height: 1.4),
           ),
         ]),
       );
