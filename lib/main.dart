@@ -1,13 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:profile_1/login-register/LoginScreen.dart';
 import 'package:profile_1/page/edit_profile_page.dart';
 import 'package:profile_1/page/profile_page.dart';
 import 'package:profile_1/utils/user_preferences.dart';
 
-Future main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  await UserPreferences.init();
+  await Firebase.initializeApp();
 
   runApp(MyApp());
 }
