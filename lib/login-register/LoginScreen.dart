@@ -1,9 +1,15 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:profile_1/Page_ChatBot/chatbot.dart';
 import 'package:profile_1/homepage/homeScreen.dart';
-import 'package:profile_1/login-register/RegisterScreen.dart';
+// import 'package:profile_1/login-register/RegisterScreen.dart';
 import 'package:profile_1/page/main_page.dart';
+
+import 'RegistrationScreen.dart';
+// =======
+// import 'package:profile_1/login-register/RegistrationScreen.dart';
+// >>>>>>> 21f10f4ea276930e6453040bce1f9179c27a4b32
 
 // ignore_for_file: file_names
 class LoginScreen extends StatefulWidget {
@@ -144,7 +150,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            RegisterScreen()));
+                                            RegistrationScreen()));
                               },
                               child: Text(
                                 " SignUp",
@@ -173,6 +179,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 Fluttertoast.showToast(msg: "Login Successful"),
                 Navigator.of(context).pushReplacement(
                     MaterialPageRoute(builder: (context) => const Homepage())),
+// =======
+//                     MaterialPageRoute(builder: (context) => const ChatBot())),
+// >>>>>>> 21f10f4ea276930e6453040bce1f9179c27a4b32
               })
           .catchError((e) {
         Fluttertoast.showToast(msg: e!.message);
