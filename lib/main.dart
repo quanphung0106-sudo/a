@@ -8,7 +8,7 @@ import 'package:profile_1/utils/user_preferences.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-
+  await UserPreferences.init();
   runApp(MyApp());
 }
 

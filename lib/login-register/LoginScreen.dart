@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:profile_1/homepage/homeScreen.dart';
 import 'package:profile_1/login-register/RegisterScreen.dart';
+import 'package:profile_1/page/main_page.dart';
 
 // ignore_for_file: file_names
 class LoginScreen extends StatefulWidget {
@@ -170,8 +171,8 @@ class _LoginScreenState extends State<LoginScreen> {
           .signInWithEmailAndPassword(email: email, password: password)
           .then((uid) => {
                 Fluttertoast.showToast(msg: "Login Successful"),
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                    builder: (context) => const homeScreen())),
+                Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(builder: (context) => const Homepage())),
               })
           .catchError((e) {
         Fluttertoast.showToast(msg: e!.message);
