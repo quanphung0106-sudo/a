@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:profile_1/Page_ChatBot/chatbot.dart';
 import 'package:profile_1/homepage/homeScreen.dart';
-import 'package:profile_1/login-register/RegisterScreen.dart';
+import 'package:profile_1/login-register/RegistrationScreen.dart';
 
 // ignore_for_file: file_names
 class LoginScreen extends StatefulWidget {
@@ -144,7 +144,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            RegisterScreen()));
+                                            RegistrationScreen()));
                               },
                               child: Text(
                                 " SignUp",
